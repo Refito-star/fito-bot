@@ -20,7 +20,9 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 
 # Urutan model paling bandel buat akun free
 AVAILABLE_MODELS = [
-    'gemini-flash-latest', 'gemini-1.5-pro'
+    'gemini-2.0-flash',        # Ini yang paling baru & kenceng
+    'gemini-1.5-flash-8b',     # Ini versi ringan, jarang kena limit
+    'gemini-1.5-flash',
 ]
 
 # KEPRIBADIAN FITO (Ini yang bikin dia kayak manusia)
@@ -114,4 +116,5 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
+
     main()
